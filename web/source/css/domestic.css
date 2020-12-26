@@ -1,0 +1,248 @@
+* {
+    font-family: 'Nanum Gothic', 'Oswald';
+    margin: 0;
+}
+
+body {
+    background: black;
+}
+
+header p {
+    text-align: right;
+    padding-right: 10px;
+}
+
+nav {
+    height: 55px;
+    width: 100%;
+    background: #f0f0f0;
+    font-size: 1em;
+    font-weight: bold;
+    position: -webkit-sticky;
+    z-index: 1;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0 auto;
+    width: 600px;
+    height: 55px;
+}
+
+nav li {
+    display: inline;
+    float: left;
+    /* 이게 왜 있어야 할까... */
+}
+
+#logo {
+    font-family: 'Oswald';
+    color: white;
+    background-color: #AE1006;
+    font-size: 1.2em;
+}
+
+#currentPage{
+    background-color: #d8d8d8;
+    color: #AE1006;
+}
+
+.clearfix:before, .clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+
+
+header p {
+    color: white;
+}
+
+nav a {
+    color: black;
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 55px;
+}
+
+nav li a {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+nav a:hover, nav a:active {
+    background-color: #d8d8d8;
+    color: #AE1006;
+}
+
+nav a#trigger {
+    display: none;
+    font-size: 1.2em;
+    color: white;
+    font-family: 'Oswald';
+}
+
+/* for sticky nav bar */
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin-bottom: 50px;
+}
+/*after nav bar->content*/
+
+#content {
+    width: 70%;
+    margin: 0 auto;
+    color: white;
+    margin-top: 2.5%;
+}
+
+.news{
+    border: 1px solid gray;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    display: inline-block;
+    overflow: auto;
+    margin-right: 2.5%;
+    margin-left: 2.5%;
+    width: 44%;
+    cursor: pointer;
+ }
+
+.news .title{
+    font-size: 130%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-weight: bold;
+}
+
+.news .content{
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    width: 90%;
+    margin-right: 5%;
+
+}
+.hide{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 30px;
+}
+.stretch{
+
+}
+.news img{
+    margin-left: 5%;
+}
+
+@media screen and (min-width: 1200px){
+
+    .stretch{
+        width: 93%;
+    }
+
+}
+@media screen and (max-width: 1200px) {
+    /*for tablet*/
+
+    #currentPage{
+        background-color: #d8d8d8;
+        color: #AE1006;
+    }
+    #content {
+        width: 90%;
+    }
+    .news{
+        display: block;
+        width: 95%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    /*for tablet*/
+    nav {
+        height: auto;
+    }
+    nav ul {
+        width: 100%;
+        display: block;
+        height: auto;
+    }
+    nav li {
+        width: 50%;
+        float: left;
+        position: relative;
+    }
+    nav li a {
+        border-bottom: 1px solid #AE1006;
+        border-right: 1px solid #AE1006;
+        text-align: center;
+    }
+    nav a {
+        text-align: left;
+        width: 100%;
+        text-indent: 25px;
+    }
+    #currentPage{
+        background-color: #d8d8d8;
+    }
+
+
+@media screen and (max-width:380px) {
+    /*for smartphone*/
+    nav {
+        border-bottom: 0;
+    }
+    nav ul {
+        display: none;
+        height: auto;
+    }
+    nav li {
+        display: block;
+        float: none;
+        width: 100%;
+    }
+    nav li a {
+        border-bottom: 1px solid #AE1006;
+    }
+    nav a#trigger {
+        display: block;
+        background-color: #AE1006;
+        width: 100%;
+        position: relative;
+    }
+    nav a#trigger:after {
+        content: " ";
+        background: url('https://mdbootstrap.com/img/svg/hamburger6.svg?color=000') no-repeat;
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        position: absolute;
+        right: 15px;
+        top: 10px;
+    }
+    #currentPage{
+        background-color: #d8d8d8;
+    }
+
+}    
+

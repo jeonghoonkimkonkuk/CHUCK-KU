@@ -1,0 +1,407 @@
+* {
+    font-family: 'Nanum Gothic', 'Oswald';
+    margin: 0;
+    color: white;
+}
+a{
+    text-decoration: none;
+}
+body {
+    background: black;
+}
+
+header p {
+    text-align: right;
+    padding-right: 10px;
+}
+
+nav {
+    height: 55px;
+    width: 100%;
+    background: #f0f0f0;
+    font-size: 1em;
+    font-weight: bold;
+    position: -webkit-sticky;
+    z-index: 1;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0 auto;
+    width: 600px;
+    height: 55px;
+}
+
+nav li {
+    display: inline;
+    float: left;
+    /* 이게 왜 있어야 할까... */
+}
+#logo {
+    font-family: 'Oswald';
+    color: white;
+    background-color: #AE1006;
+    font-size: 1.2em;
+}
+#currentPage{
+    background-color: #d8d8d8;
+    color: #AE1006;
+}
+.clearfix:before, .clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+header p {
+    color: white;
+}
+
+nav a {
+    color: black;
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 55px;
+}
+
+nav li a {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+nav a:hover, nav a:active {
+    background-color: #d8d8d8;
+    color: #AE1006;
+}
+
+nav a#trigger {
+    display: none;
+    font-size: 1.2em;
+    color: white;
+    font-family: 'Oswald';
+}
+
+/* for sticky nav bar */
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin-bottom: 50px;
+}
+/*after nav bar->content*/
+
+#content {
+    width: 70%;
+    margin: 0 auto;
+    color: white;
+}
+#rs1{
+    margin: 30px 0;
+    padding: 15px 0;
+    font-size: 1.1em;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+@media screen and (min-width: 600px){
+    #test{
+        font-size: 35px;
+    }
+}
+@media screen and (max-width: 600px) {
+    /*for tablet*/
+    nav {
+        height: auto;
+    }
+    nav ul {
+        width: 100%;
+        display: block;
+        height: auto;
+    }
+    nav li {
+        width: 50%;
+        float: left;
+        position: relative;
+    }
+    nav li a {
+        border-bottom: 1px solid #AE1006;
+        border-right: 1px solid #AE1006;
+        text-align: center;
+    }
+    nav a {
+        text-align: left;
+        width: 100%;
+        text-indent: 25px;
+    }
+    #currentPage{
+        background-color: #d8d8d8;
+    }
+    #content {
+        width: 75%;
+    }
+
+    #content {
+        width: 100%;
+    }
+    #menu{
+
+     /*W*/margin: 0 0;
+     width: 100%;
+
+ }
+ #b1 h2, #b2 h2, #b3 h2{
+    width: 100%;
+    font-size: 15px;
+
+}
+#b1, #b2, #b3{
+    width: 32%;
+
+}
+#careform{
+    border: 3px solid gray;
+}
+#exp{
+    font-size:14px;
+}
+#inputform{
+    font-size:14px;
+}
+}
+
+@media screen and (max-width:380px) {
+    /*for smartphone*/
+    nav {
+        border-bottom: 0;
+    }
+    nav ul {
+        display: none;
+        height: auto;
+    }
+    nav li {
+        display: block;
+        float: none;
+        width: 100%;
+    }
+    nav li a {
+        border-bottom: 1px solid #AE1006;
+    }
+    nav a#trigger {
+        display: block;
+        background-color: #AE1006;
+        width: 100%;
+        position: relative;
+    }
+    nav a#trigger:after {
+        content: " ";
+        background: url('https://mdbootstrap.com/img/svg/hamburger6.svg?color=000') no-repeat;
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        position: absolute;
+        right: 15px;
+        top: 10px;
+    }
+    #currentPage{
+        background-color: #d8d8d8;
+    }
+    #content {
+        width: 100%;
+    }
+    #menu{
+
+     /*W*/margin: 0 0;
+     width: 100%;
+
+ }
+ #test{
+    font-size: 9px;
+ }
+ #b1 h2, #b2 h2, #b3 h2{
+    width: 100%;
+    font-size: 18px;
+}
+#b1, #b2, #b3{
+    width: 32%;
+}
+#careform{
+    font-size: 14px;
+    border: 3px solid gray;
+}
+#rs1{
+    font-size: 1.1em;
+}
+#inputform{
+    font-size:14px;
+}
+#care{
+    font-size:17px;
+}
+/*    #careform{
+        border: 0px;
+        width: 10%;
+        padding: 0px 0px;
+        }*/
+    }
+    button{
+        border: 0px;
+        outline: 0;
+    }
+
+    #menu{
+       padding: 3% 5%;
+       /*overflow: auto;*/
+       text-align: center;
+       /*display: inline;*/
+       width: 90%;
+       margin: 0 auto;
+
+   }
+   #b1, #b2, #b3{
+   /* border-bottom: 3px solid gray;*/
+    color:white;
+    background: black;
+    /*   display: none;*/
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+#b1{
+    border-bottom: 3px solid gray;
+
+}
+#b1 h2{
+    color:red;
+}
+#luck1{
+    display: block;
+    text-align: center;
+    overflow: auto;
+}
+#inputform{
+ /* float:left;*/
+ /* text-align: left;*/
+
+ width: 300px;
+ margin: 0 auto;
+}
+
+/*#todays{
+    width: 80px;
+    height: 80px;
+    border-radius: 10px 10px;
+    border:3px solid black;
+}
+#todays:hover{
+    border:3px solid #00FF00;
+}
+*/#ex{
+    color: gray;
+}
+#result{
+    margin-top: 30px;
+    border-radius: 10px;
+    width:170px;
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+    background-color: #AE1006;
+    border: 1px solid #AE1006;
+}
+#luck1 input[type=text]{
+    color:black;
+    border-radius: 10px;
+    margin: 7px 0;
+}
+#luck1 input[type=date]{
+    color:black;
+    border-radius: 10px;
+    margin: 7px 0;
+}
+#luck1{
+  /*  border:1px solid white;*/
+  padding: 5px 5px;
+}
+#care{
+    color:red;
+    text-align: center;  
+}
+#careform{
+ /* float: right;*/
+ width: 90%;
+ border : 5px solid gray;
+ padding: 15px 0;
+ margin : 30px auto;
+ font-size: 1.2em;
+
+}
+
+#rs1{
+    display: block;
+    color: white;
+    font-size: 1.2em;
+
+}
+#luck1 p:nth-of-type(3){
+    text-align: center;
+}
+#exp{
+    display: block;
+    margin: 5px 0;
+}
+#luck2{
+    display: none;
+    /*  border:1px solid white;*/
+    padding: 5px 5px;
+    text-align: center;
+}
+#luck2 div{
+ /*bac*/
+ padding:10px 10px;
+ /* background: white;*/
+ /*border-radius: 10px;*/
+ margin-top: 10px;
+}
+#luck2 img{
+    width: 10%;
+    height: 40%;
+    border-radius: 10px;
+    margin: 1% 1%;
+}
+#test{
+   border: 3px solid gray;
+   display: block;
+   /* height: 0;*/
+   color: white;
+   overflow: hidden;
+   display: none;
+   margin: 30px 0;
+}
+
+#test img{
+  width: 8%;
+  height: 85%;
+  float:left;
+}
+
+
+/**/
+/*#td-luck li:hover{
+    height: 50px;
+
+    font-size: 20px;
+    background-color: #AE1006;
+    color : white;
+}
+
+*/
